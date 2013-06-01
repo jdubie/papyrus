@@ -1,10 +1,5 @@
 module.exports = function(match) {
-  match('',                   'home#index');
-  match('repos',              'repos#index');
-  match('repos/:owner/:name', 'repos#show');
-  match('users'       ,       'users#index');
-  match('users/:login',       'users#show');
-  match('users_lazy/:login',  'users#show_lazy');
-  match('books',              'books#index');
-  match('books/:slug',        'books#show');
+  match('',               'books#index');
+  match(':slug',          'books#show');
+  match(':slug/:chapter', 'chapters#show');
 };
