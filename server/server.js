@@ -1,7 +1,8 @@
 //
 // Home of the main server object
 //
-var express = require('express'),
+var path = require('path'),
+    express = require('express'),
     env = require('./lib/env'),
     mw = require('./middleware'),
     DataAdapter = require('./lib/data_adapter'),
@@ -9,6 +10,8 @@ var express = require('express'),
     rendrMw = require('rendr/server/middleware'),
     viewEngine = require('rendr/server/viewEngine'),
     app;
+
+rendr.entryPath = path.join(__dirname, '..');
 
 app = express();
 
@@ -61,9 +64,11 @@ function initMiddleware() {
 function initLibs(callback) {
   var options;
   options = {
+    paths: { entryPath: path.join(__dirname,  '..') },
     dataAdapter: new DataAdapter(env.current.api),
     errorHandler: mw.errorHandler()
   };
+  console.log(rendrServer);
   rendrServer.init(options, callback);
 }
 
