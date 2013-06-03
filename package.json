@@ -1,7 +1,7 @@
 {
-  "name": "rendr-app-template",
-  "version": "0.0.16",
-  "description": "",
+  "name": "papyrus",
+  "version": "0.0.1",
+  "description": "webserver for veritas.io",
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui bdd --reporter spec  ./test --recursive",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/airbnb/rendr-app-template.git"
+    "url": "git://github.com/jdubie/papyrus.git"
   },
   "dependencies": {
     "express": "~>3",
