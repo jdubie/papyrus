@@ -1,2 +1,5 @@
-<h1>{{book}}</h1>
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">{{book}}</li>
+</ul>
 {{view "book_chapters_view" collection=chapters book=slug}}

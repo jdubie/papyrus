@@ -1,4 +1,71 @@
-<h1>books</h1>
-{{#each models}}
-  <p><a href="/{{slug}}">{{book}}</a></p>
-{{/each}}
+<h3>Old Testament</h3>
+<h5>Law</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isLaw}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>History</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isHistory}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Poetry and Wisdom</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isPoetryWisdom}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Major Prophets</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isMajorProphets}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Minor Prophets</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isMinorProphets}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h3>New Testament</h3>
+<h5>The Gospels</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isGospels}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Pauline Epistles</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isEpistlesPauline}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Pastoral Epistles</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isEpistlesPastoral}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>General Epistles</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isEpistlesGeneral}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
+
+<h5>Revelation</h5>
+<ul class="nav nav-tabs nav-stacked">
+{{#each models}}{{#if isRevelation}}
+  <li><a href="/{{slug}}">{{book}}</a></li>
+{{/if}}{{/each}}
+</ul>
