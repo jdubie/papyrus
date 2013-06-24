@@ -6,6 +6,14 @@ var Router = module.exports = function Router(options) {
 
 Router.prototype.__proto__ = BaseClientRouter.prototype;
 
+/*
+ * Scrolls to top before all navigations
+ */
+Router.prototype.navigate = function () {
+  window.scrollTo(0, 0);
+  BaseClientRouter.prototype.navigate.apply(this, arguments);
+};
+
 Router.prototype.postInitialize = function() {
   this.on('action:start', this.trackImpression, this);
 };
